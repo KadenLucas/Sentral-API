@@ -575,6 +575,13 @@ class EnrolmentParams(Params):
     include: ParamList[
         Literal["student", "house", "rollclass", "classes", "campus", None]
     ] = None
+
+
+@dataclass(slots=True)
+class EnrolmentCollectionParams(Params):
+    include: ParamList[
+        Literal["student", "house", "rollclass", "classes", "campus", None]
+    ] = None
     limit: int = None
     offset: int = None
     ids: ParamList = None
@@ -589,3 +596,42 @@ class EnrolmentParams(Params):
     endDateFrom: datetime.date = None
     endDateTo: datetime.date = None
     includeInactive: bool = None
+
+
+@dataclass(slots=True)
+class EnrolmentClassesParams(Params):
+    include: ParamList[Literal[None]] = None
+    limit: int = None
+    offset: int = None
+
+
+@dataclass(slots=True)
+class EnrolmentHouseParams(Params):
+    include: ParamList[Literal[None]] = None
+
+
+@dataclass(slots=True)
+class EnrolmentRollclassParams(Params):
+    include: ParamList[Literal[None]] = None
+
+
+@dataclass(slots=True)
+class HouseCollectionParams(Params):
+    include: ParamList[Literal[None]] = None
+    limit: int = None
+    offset: int = None
+    ids: ParamList = None
+    schoolIds: ParamList = None
+
+
+@dataclass(slots=True)
+class AbsenceCollectionParams(Params):
+    include: ParamList[Literal[None]] = None
+    limit: int = None
+    offset: int = None
+    studentId: ParamList = (
+        None  # Check for potential error - should presumably be "studentIds"
+    )
+    year: ParamList = None  # Check for potential error - should presumably be "years"
+    coreStudentIds: ParamList = None
+    dates: ParamList = None

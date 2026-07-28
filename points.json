@@ -1,0 +1,192 @@
+{
+  "positive-incidents": [
+    {
+      "name": "SASS Commendation",
+      "points": 5,
+      "scaling": 1.10
+    },
+    {
+      "name": "Teacher Commendation",
+      "points": 5,
+      "scaling": 1.15
+    },
+    {
+      "name": "Head Teacher Commendation",
+      "points": 10,
+      "scaling": 1.15
+    },
+    {
+      "name": "Deputy Commendation",
+      "points": 15,
+      "scaling": 1.20
+    },
+    {
+      "name": "Principal Commendation",
+      "points": 20,
+      "scaling": 2.00
+    },
+    {
+      "name": "Extra Curricular",
+      "points": 10,
+      "scaling": 1.10
+    },
+    {
+      "name": "Sports Award",
+      "points": 10,
+      "scaling": 1.10
+    },
+    {
+      "name": "Positive Phone Home",
+      "points": 5,
+      "scaling": 1.05
+    },
+    {
+      "name": "Presentation Invitation",
+      "points": 5,
+      "scaling": 1.10
+    },
+    {
+      "name": "Leadership - School Captain Induction Invitation",
+      "points": 20,
+      "scaling": 1.25
+    },
+    {
+      "name": "Leadership - Prefect Induction Invitiation",
+      "points": 15,
+      "scaling": 1.15
+    },
+    {
+      "name": "Leadership - Senior Leader Induction Invitation",
+      "points": 10,
+      "scaling": 1.15
+    },
+    {
+      "name": "Leadership - Peer Support Invitation",
+      "points": 10,
+      "scaling": 1.10
+    },
+    {
+      "name": "Leadership - SRC Induction Invitation",
+      "points": 10,
+      "scaling": 1.10
+    },
+    {
+      "name": "Leadership - AECG Induction Invitation",
+      "points": 10,
+      "scaling": 1.10
+    },
+    {
+      "name": "Leadership - House Captains Induction Invitation",
+      "points": 10,
+      "scaling": 1.10
+    },
+    {
+      "name": "ELAP - Successful",
+      "points": 10,
+      "scaling": 1.20
+    },
+    {
+      "name": "ELAP - Unsuccessful",
+      "points": 5,
+      "scaling": 1.15
+    },
+    {
+      "name": "First in Course",
+      "points": 20,
+      "scaling": 1.25
+    },
+    {
+      "name": "Second in Course",
+      "points": 15,
+      "scaling": 1.20
+    },
+    {
+      "name": "Third in Course",
+      "points": 10,
+      "scaling": 1.20
+    },
+    {
+      "name": "First in Year",
+      "points": 25,
+      "scaling": 1.30
+    },
+    {
+      "name": "Second in Year",
+      "points": 20,
+      "scaling": 1.25
+    },
+    {
+      "name": "Third in Year",
+      "points": 15,
+      "scaling": 1.25
+    },
+    {
+      "name": "Reader of the Term",
+      "points": 10,
+      "scaling": 1.05
+    },
+    {
+      "name": "Academic Representation",
+      "points": 10,
+      "scaling": 1.05
+    }
+  ],
+  "minor-negative-incidents": [
+    {
+      "name": "Minor - Disrespectful",
+      "points": 0,
+      "scaling": 0.95
+    },
+    {
+      "name": "Minor - Unsafe",
+      "points": 0,
+      "scaling": 0.95
+    },
+    {
+      "name": "Minor - Non-Learner",
+      "points": 0,
+      "scaling": 0.95
+    },
+    {
+      "name": "Minor - Irresponsible",
+      "points": 0,
+      "scaling": 0.95
+    }
+  ],
+  "major-negative-incident": [
+    {
+      "name": "Disrespectful",
+      "points": 0,
+      "scaling": 0.90
+    },
+    {
+      "name": "Unsafe",
+      "points": 0,
+      "scaling": 0.90
+    },
+    {
+      "name": "Non-Learner",
+      "points": 0,
+      "scaling": 0.90
+    },
+    {
+      "name": "Irresponsible",
+      "points": 0,
+      "scaling": 0.90
+    }
+  ],
+  "Negative - Behaviours of Concern": [
+    {
+      "name": "Continued or persistent disobedience and/or disruptive behaviour",
+      "points": 0,
+      "scaling": 0
+    }
+  ],
+  "lhv-manual-rewards": [
+    {
+      "name": "Homework Centre",
+      "points": 5,
+      "scaling": 1.025
+    }
+  ]
+}

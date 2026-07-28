@@ -387,3 +387,29 @@ class EnrolmentLinks(SentralObject):
             _data = locals()
 
         super().__init__(_data)
+
+
+@dataclass(init=False, slots=True)
+class HouseLinks(SentralObject):
+    self_: str
+    students: str
+
+    def __init__(self, self_: str, students: str, _data: dict | None = None):
+        if _data is None:
+            _data = locals()
+
+        super().__init__(_data)
+
+
+@dataclass(init=False, slots=True)
+class AbsenceLinks(SentralObject):
+    self_: str
+    student: str
+
+    def __init__(
+        self, self_: str = None, student: str = None, _data: dict | None = None
+    ):
+        if _data is None:
+            _data = locals()
+
+        super().__init__(_data)

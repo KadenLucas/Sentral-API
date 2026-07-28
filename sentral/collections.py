@@ -496,6 +496,14 @@ class AbsenceCollection(SentralObject):
 
         super().__init__(_data)
 
+    @staticmethod
+    def get(engine: Engine, params: params.AbsenceCollectionParams | None = None):
+        res = engine.query_json(
+            endpoint="/v1/attendance/absence", method="GET", params=params
+        )
+
+        return AbsenceCollection(_data=res)
+
 
 @dataclass(init=False, slots=True)
 class StudentAcademicReportCollection(SentralObject):
@@ -723,3 +731,49 @@ class CoreClassCollection(SentralObject):
             _data = locals()
 
         super().__init__(_data)
+
+
+@dataclass(init=False, slots=True)
+class ClassCollection(SentralObject):
+    data: list[objects.Class]
+    meta: meta.CollectionMeta
+    links: links.CollectionLinks
+
+    def __init__(
+        self,
+        data: list[objects.Class] = None,
+        meta: meta.CollectionMeta = None,
+        links: links.CollectionLinks = None,
+        _data: dict | None = None,
+    ):
+        if _data is None:
+            _data = locals()
+
+        super().__init__(_data)
+
+
+@dataclass(init=False, slots=True)
+class HouseCollection(SentralObject):
+    data: list[objects.House]
+    meta: meta.CollectionMeta
+    links: links.CollectionLinks
+
+    def __init__(
+        self,
+        data: list[objects.House] = None,
+        meta: meta.CollectionMeta = None,
+        links: links.CollectionLinks = None,
+        _data: dict | None = None,
+    ):
+        if _data is None:
+            _data = locals()
+
+        super().__init__(_data)
+
+    @staticmethod
+    def get(engine: Engine, params: params.HouseCollectionParams | None = None):
+        res = engine.query_json(
+            endpoint="/v1/enrolments/house", method="GET", params=params
+        )
+
+        return HouseCollection(_data=res)
