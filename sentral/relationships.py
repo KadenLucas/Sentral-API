@@ -1,5 +1,3 @@
-# pyright: reportArgumentType=false
-
 from dataclasses import dataclass
 
 from . import SentralObject
@@ -10,7 +8,7 @@ class RelatedModel(SentralObject):
     id: str
     type: str
 
-    def __init__(self, id: str = None, type: str = None, _data: dict | None = None):
+    def __init__(self, id: str | None = None, type: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -21,7 +19,7 @@ class RelatedModel(SentralObject):
 class SingleRelationship(SentralObject):
     data: RelatedModel
 
-    def __init__(self, data: RelatedModel = None, _data: dict | None = None):
+    def __init__(self, data: RelatedModel | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -32,7 +30,7 @@ class SingleRelationship(SentralObject):
 class CollectionRelationship(SentralObject):
     data: list[RelatedModel]
 
-    def __init__(self, data: list[RelatedModel] = None, _data: dict | None = None):
+    def __init__(self, data: list[RelatedModel] | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -49,11 +47,11 @@ class ActivityRelationships(SentralObject):
 
     def __init__(
         self,
-        cycles: CollectionRelationship = None,
-        instances: CollectionRelationship = None,
-        organisers: CollectionRelationship = None,
-        venue: SingleRelationship = None,
-        category: SingleRelationship = None,
+        cycles: CollectionRelationship | None = None,
+        instances: CollectionRelationship | None = None,
+        organisers: CollectionRelationship | None = None,
+        venue: SingleRelationship | None = None,
+        category: SingleRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -71,10 +69,10 @@ class AttendeeLinkRelationships(SentralObject):
 
     def __init__(
         self,
-        student: SingleRelationship = None,
-        activityInstance: SingleRelationship = None,
-        activity: SingleRelationship = None,
-        cycleInstance: SingleRelationship = None,
+        student: SingleRelationship | None = None,
+        activityInstance: SingleRelationship | None = None,
+        activity: SingleRelationship | None = None,
+        cycleInstance: SingleRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -90,8 +88,8 @@ class ActivityInstanceRelationships(SentralObject):
 
     def __init__(
         self,
-        activity: SingleRelationship = None,
-        rolls: CollectionRelationship = None,
+        activity: SingleRelationship | None = None,
+        rolls: CollectionRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -112,13 +110,13 @@ class ActivitySportEventRelationships(SentralObject):
 
     def __init__(
         self,
-        activity: SingleRelationship = None,
-        venues: CollectionRelationship = None,
-        grounds: CollectionRelationship = None,
-        coaches: CollectionRelationship = None,
-        vehicles: CollectionRelationship = None,
-        teams: CollectionRelationship = None,
-        transportEvents: CollectionRelationship = None,
+        activity: SingleRelationship | None = None,
+        venues: CollectionRelationship | None = None,
+        grounds: CollectionRelationship | None = None,
+        coaches: CollectionRelationship | None = None,
+        vehicles: CollectionRelationship | None = None,
+        teams: CollectionRelationship | None = None,
+        transportEvents: CollectionRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -135,9 +133,9 @@ class ActivityGuardianLinkRelationships(SentralObject):
 
     def __init__(
         self,
-        activityInstance: SingleRelationship = None,
-        staff: SingleRelationship = None,
-        persion: SingleRelationship = None,
+        activityInstance: SingleRelationship | None = None,
+        staff: SingleRelationship | None = None,
+        persion: SingleRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -155,10 +153,10 @@ class ActivityResponseRelationships(SentralObject):
 
     def __init__(
         self,
-        attendeeStudent: SingleRelationship = None,
-        coreConsentor: SingleRelationship = None,
-        enrolmentConsentor: SingleRelationship = None,
-        activityInstance: SingleRelationship = None,
+        attendeeStudent: SingleRelationship | None = None,
+        coreConsentor: SingleRelationship | None = None,
+        enrolmentConsentor: SingleRelationship | None = None,
+        activityInstance: SingleRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -172,7 +170,7 @@ class ActivityRollRelationships(SentralObject):
     activityInstance: SingleRelationship
 
     def __init__(
-        self, activityInstance: SingleRelationship = None, _data: dict | None = None
+        self, activityInstance: SingleRelationship | None = None, _data: dict | None = None
     ):
         if _data is None:
             _data = locals()
@@ -184,7 +182,7 @@ class ActivityRollRelationships(SentralObject):
 class ActivityPositionRelationships(SentralObject):
     group: SingleRelationship
 
-    def __init__(self, group: SingleRelationship = None, _data: dict | None = None):
+    def __init__(self, group: SingleRelationship | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -196,7 +194,7 @@ class ActivityPositionGroupRelationships(SentralObject):
     positions: CollectionRelationship
 
     def __init__(
-        self, positions: CollectionRelationship = None, _data: dict | None = None
+        self, positions: CollectionRelationship | None = None, _data: dict | None = None
     ):
         if _data is None:
             _data = locals()
@@ -221,14 +219,14 @@ class StaffAbsenceRelationships(SentralObject):
 
     def __init__(
         self,
-        person: SingleRelationship = None,
-        emails: CollectionRelationship = None,
-        phoneNumbers: CollectionRelationship = None,
-        absences: SingleRelationship = None,
-        qualifications: CollectionRelationship = None,
-        employments: CollectionRelationship = None,
-        staff: SingleRelationship = None,
-        leaveType: SingleRelationship = None,
+        person: SingleRelationship | None = None,
+        emails: CollectionRelationship | None = None,
+        phoneNumbers: CollectionRelationship | None = None,
+        absences: SingleRelationship | None = None,
+        qualifications: CollectionRelationship | None = None,
+        employments: CollectionRelationship | None = None,
+        staff: SingleRelationship | None = None,
+        leaveType: SingleRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -260,24 +258,24 @@ class PersonRelationships(SentralObject):
 
     def __init__(
         self,
-        primaryHousehold: SingleRelationship = None,
-        studentPrimaryEnrolment: SingleRelationship = None,
-        staff: SingleRelationship = None,
-        student: SingleRelationship = None,
-        contactDetails: SingleRelationship = None,
-        otherHouseholds: SingleRelationship = None,
-        studentContacts: SingleRelationship = None,
-        studentTenants: SingleRelationship = None,
-        prescribedMedication: CollectionRelationship = None,
-        doctors: CollectionRelationship = None,
-        associatedStudents: CollectionRelationship = None,
-        emails: SingleRelationship = None,
-        phoneNumbers: SingleRelationship = None,
-        givenConsents: SingleRelationship = None,
-        givenConsentLinks: SingleRelationship = None,
-        emergencyContactLinks: SingleRelationship = None,
-        abilities: SingleRelationship = None,
-        additionalFields: CollectionRelationship = None,
+        primaryHousehold: SingleRelationship | None = None,
+        studentPrimaryEnrolment: SingleRelationship | None = None,
+        staff: SingleRelationship | None = None,
+        student: SingleRelationship | None = None,
+        contactDetails: SingleRelationship | None = None,
+        otherHouseholds: SingleRelationship | None = None,
+        studentContacts: SingleRelationship | None = None,
+        studentTenants: SingleRelationship | None = None,
+        prescribedMedication: CollectionRelationship | None = None,
+        doctors: CollectionRelationship | None = None,
+        associatedStudents: CollectionRelationship | None = None,
+        emails: SingleRelationship | None = None,
+        phoneNumbers: SingleRelationship | None = None,
+        givenConsents: SingleRelationship | None = None,
+        givenConsentLinks: SingleRelationship | None = None,
+        emergencyContactLinks: SingleRelationship | None = None,
+        abilities: SingleRelationship | None = None,
+        additionalFields: CollectionRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -290,7 +288,7 @@ class PersonRelationships(SentralObject):
 class VenueGroundsRelationships(SentralObject):
     venue: SingleRelationship
 
-    def __init__(self, venue: SingleRelationship = None, _data: dict | None = None):
+    def __init__(self, venue: SingleRelationship | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -305,9 +303,9 @@ class ActivityTransportEventRelationships(SentralObject):
 
     def __init__(
         self,
-        activity: SingleRelationship = None,
-        vehicle: SingleRelationship = None,
-        sportEvent: SingleRelationship = None,
+        activity: SingleRelationship | None = None,
+        vehicle: SingleRelationship | None = None,
+        sportEvent: SingleRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -325,10 +323,10 @@ class ActivityTeamRelationships(SentralObject):
 
     def __init__(
         self,
-        activity: SingleRelationship = None,
-        coaches: CollectionRelationship = None,
-        teamMembers: CollectionRelationship = None,
-        teamMemberPositions: CollectionRelationship = None,
+        activity: SingleRelationship | None = None,
+        coaches: CollectionRelationship | None = None,
+        teamMembers: CollectionRelationship | None = None,
+        teamMemberPositions: CollectionRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -344,8 +342,8 @@ class ActivityVehicleRelationships(SentralObject):
 
     def __init__(
         self,
-        activity: SingleRelationship = None,
-        transportEvents: CollectionRelationship = None,
+        activity: SingleRelationship | None = None,
+        transportEvents: CollectionRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -358,7 +356,7 @@ class ActivityVehicleRelationships(SentralObject):
 class StaffQualificationRelationships(SentralObject):
     staff: SingleRelationship
 
-    def __init__(self, staff: SingleRelationship = None, _data: dict | None = None):
+    def __init__(self, staff: SingleRelationship | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -375,11 +373,11 @@ class TimetableLessonRelationships(SentralObject):
 
     def __init__(
         self,
-        relatedStudent: SingleRelationship = None,
-        relatedStaff: SingleRelationship = None,
-        relatedCoreStudent: SingleRelationship = None,
-        relatedCoreStaff: SingleRelationship = None,
-        relatedTimetableClass: SingleRelationship = None,
+        relatedStudent: SingleRelationship | None = None,
+        relatedStaff: SingleRelationship | None = None,
+        relatedCoreStudent: SingleRelationship | None = None,
+        relatedCoreStaff: SingleRelationship | None = None,
+        relatedTimetableClass: SingleRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -395,8 +393,8 @@ class VenueRelationships(SentralObject):
 
     def __init__(
         self,
-        group: SingleRelationship = None,
-        grounds: CollectionRelationship = None,
+        group: SingleRelationship | None = None,
+        grounds: CollectionRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -415,11 +413,11 @@ class ActivityTeamMemberRelationships(SentralObject):
 
     def __init__(
         self,
-        attendeeLink: SingleRelationship = None,
-        team: SingleRelationship = None,
-        position: SingleRelationship = None,
-        cycleInstance: SingleRelationship = None,
-        student: SingleRelationship = None,
+        attendeeLink: SingleRelationship | None = None,
+        team: SingleRelationship | None = None,
+        position: SingleRelationship | None = None,
+        cycleInstance: SingleRelationship | None = None,
+        student: SingleRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -450,23 +448,23 @@ class StudentRelationships(SentralObject):
 
     def __init__(
         self,
-        primaryEnrolment: SingleRelationship = None,
-        person: SingleRelationship = None,
-        emails: CollectionRelationship = None,
-        phoneNumbers: CollectionRelationship = None,
-        activities: CollectionRelationship = None,
-        activityInstances: CollectionRelationship = None,
-        activityLinks: CollectionRelationship = None,
-        documents: CollectionRelationship = None,
-        tenants: CollectionRelationship = None,
-        flags: CollectionRelationship = None,
-        flagLinks: CollectionRelationship = None,
-        awards: CollectionRelationship = None,
-        awardLinks: CollectionRelationship = None,
-        contacts: CollectionRelationship = None,
-        holidays: CollectionRelationship = None,
-        specialNeedsPrograms: CollectionRelationship = None,
-        schoolHistory: CollectionRelationship = None,
+        primaryEnrolment: SingleRelationship | None = None,
+        person: SingleRelationship | None = None,
+        emails: CollectionRelationship | None = None,
+        phoneNumbers: CollectionRelationship | None = None,
+        activities: CollectionRelationship | None = None,
+        activityInstances: CollectionRelationship | None = None,
+        activityLinks: CollectionRelationship | None = None,
+        documents: CollectionRelationship | None = None,
+        tenants: CollectionRelationship | None = None,
+        flags: CollectionRelationship | None = None,
+        flagLinks: CollectionRelationship | None = None,
+        awards: CollectionRelationship | None = None,
+        awardLinks: CollectionRelationship | None = None,
+        contacts: CollectionRelationship | None = None,
+        holidays: CollectionRelationship | None = None,
+        specialNeedsPrograms: CollectionRelationship | None = None,
+        schoolHistory: CollectionRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -479,7 +477,7 @@ class StudentRelationships(SentralObject):
 class StudentDocumentRelationships(SentralObject):
     category: SingleRelationship
 
-    def __init__(self, category: SingleRelationship = None, _data: dict | None = None):
+    def __init__(self, category: SingleRelationship | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -501,16 +499,16 @@ class CoreStudentRelationships(SentralObject):
 
     def __init__(
         self,
-        enrolmentStudent: SingleRelationship = None,
-        additionalDetails: SingleRelationship = None,
-        coreRollclass: SingleRelationship = None,
-        attendedClasses: CollectionRelationship = None,
-        holidays: CollectionRelationship = None,
-        studentRelationships: CollectionRelationship = None,
-        coreHouse: SingleRelationship = None,
-        family: SingleRelationship = None,
-        nonResidentialFamily: SingleRelationship = None,
-        contacts: CollectionRelationship = None,
+        enrolmentStudent: SingleRelationship | None = None,
+        additionalDetails: SingleRelationship | None = None,
+        coreRollclass: SingleRelationship | None = None,
+        attendedClasses: CollectionRelationship | None = None,
+        holidays: CollectionRelationship | None = None,
+        studentRelationships: CollectionRelationship | None = None,
+        coreHouse: SingleRelationship | None = None,
+        family: SingleRelationship | None = None,
+        nonResidentialFamily: SingleRelationship | None = None,
+        contacts: CollectionRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -532,14 +530,14 @@ class EnrolmentRelationships(SentralObject):
 
     def __init__(
         self,
-        student: SingleRelationship = None,
-        house: SingleRelationship = None,
-        rollclass: SingleRelationship = None,
-        classes: CollectionRelationship = None,
-        school: SingleRelationship = None,
-        yearLevel: SingleRelationship = None,
-        academicPeriod: SingleRelationship = None,
-        campus: SingleRelationship = None,
+        student: SingleRelationship | None = None,
+        house: SingleRelationship | None = None,
+        rollclass: SingleRelationship | None = None,
+        classes: CollectionRelationship | None = None,
+        school: SingleRelationship | None = None,
+        yearLevel: SingleRelationship | None = None,
+        academicPeriod: SingleRelationship | None = None,
+        campus: SingleRelationship | None = None,
         _data: dict | None = None,
     ):
         if _data is None:

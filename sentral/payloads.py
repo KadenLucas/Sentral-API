@@ -1,12 +1,6 @@
-# pyright: reportAssignmentType=false
-
 from dataclasses import dataclass
-from typing import TYPE_CHECKING
 
-from . import SentralObject
-
-if TYPE_CHECKING:
-    from . import objects
+from . import SentralObject, objects
 
 
 class Payload:
@@ -14,7 +8,7 @@ class Payload:
 
     @property
     def __dict__(self):  # pyright: ignore[reportIncompatibleVariableOverride]
-        output = dict()
+        output = {}
 
         for slot in self.__slots__:
             value = getattr(self, slot)
@@ -30,24 +24,24 @@ class Payload:
 
 @dataclass(slots=True)
 class ActivityInstanceAttendeeLinkPayload(Payload):
-    data: objects.AttendeeLink = None
+    data: objects.AttendeeLink | None = None
 
 
 @dataclass(slots=True)
 class ActivityInstanceActivityResponsePayload(Payload):
-    data: objects.ActivityResponse = None
+    data: objects.ActivityResponse | None = None
 
 
 @dataclass(slots=True)
 class StaffPayload(Payload):
-    data: objects.Staff = None
+    data: objects.Staff | None = None
 
 
 @dataclass(slots=True)
 class StudentPayload(Payload):
-    data: objects.Student = None
+    data: objects.Student | None = None
 
 
 @dataclass(slots=True)
 class EnrolmentPayload(Payload):
-    data: objects.Enrolment = None
+    data: objects.Enrolment | None = None

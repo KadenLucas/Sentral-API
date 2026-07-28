@@ -1,5 +1,3 @@
-# pyright: reportArgumentType=false
-
 from dataclasses import dataclass
 
 from . import (
@@ -36,11 +34,11 @@ class ActivityInstance(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityInstanceAttributes = None,
-        links: links.ActivityInstanceLinks = None,
-        relationships: relationships.ActivityInstanceRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityInstanceAttributes | None = None,
+        links: links.ActivityInstanceLinks | None = None,
+        relationships: relationships.ActivityInstanceRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:

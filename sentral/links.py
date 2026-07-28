@@ -1,5 +1,3 @@
-# pyright: reportArgumentType=false
-
 from dataclasses import dataclass
 
 from . import SentralObject
@@ -14,10 +12,10 @@ class CollectionLinks(SentralObject):
 
     def __init__(
         self,
-        first: str = None,
-        last: str = None,
-        prev: str = None,
-        next: str = None,
+        first: str | None = None,
+        last: str | None = None,
+        prev: str | None = None,
+        next: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -34,9 +32,9 @@ class ActivityLinks(SentralObject):
 
     def __init__(
         self,
-        self_: str = None,
-        cycles: str = None,
-        instances: str = None,
+        self_: str | None = None,
+        cycles: str | None = None,
+        instances: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -49,7 +47,7 @@ class ActivityLinks(SentralObject):
 class CycleInstanceLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -63,8 +61,8 @@ class AttendeeLinkLinks(SentralObject):
 
     def __init__(
         self,
-        self_: str = None,
-        enrolmentAttendee: str = None,
+        self_: str | None = None,
+        enrolmentAttendee: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -78,7 +76,7 @@ class ActivityInstanceLinks(SentralObject):
     self_: str
     rolls: str
 
-    def __init__(self, self_: str = None, rolls: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, rolls: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -89,7 +87,7 @@ class ActivityInstanceLinks(SentralObject):
 class ActivitySportEventLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -100,7 +98,7 @@ class ActivitySportEventLinks(SentralObject):
 class ActivityCategoryLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -111,7 +109,7 @@ class ActivityCategoryLinks(SentralObject):
 class ActivityGuardianLinkLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -122,7 +120,7 @@ class ActivityGuardianLinkLinks(SentralObject):
 class ActivityResponseLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -137,9 +135,9 @@ class ActivityRollLinks(SentralObject):
 
     def __init__(
         self,
-        self_: str = None,
-        activityInstance: str = None,
-        uiMarkRolls: str = None,
+        self_: str | None = None,
+        activityInstance: str | None = None,
+        uiMarkRolls: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -152,7 +150,7 @@ class ActivityRollLinks(SentralObject):
 class ActivityPositionLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -163,7 +161,7 @@ class ActivityPositionLinks(SentralObject):
 class ActivityPositionGroupLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -178,9 +176,9 @@ class StaffLinks(SentralObject):
 
     def __init__(
         self,
-        self_: str = None,
-        person: str = None,
-        absences: str = None,
+        self_: str | None = None,
+        person: str | None = None,
+        absences: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -193,7 +191,7 @@ class StaffLinks(SentralObject):
 class StaffAbsenceLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -216,17 +214,17 @@ class PersonLinks(SentralObject):
 
     def __init__(
         self,
-        self_: str = None,
-        primaryHousehold: str = None,
-        otherHouseholds: str = None,
-        staff: str = None,
-        student: str = None,
-        studentContacts: str = None,
-        medicalSummary: str = None,
-        medicalConditions: str = None,
-        prescribedMedications: str = None,
-        doctors: str = None,
-        associatedStudents: str = None,
+        self_: str | None = None,
+        primaryHousehold: str | None = None,
+        otherHouseholds: str | None = None,
+        staff: str | None = None,
+        student: str | None = None,
+        studentContacts: str | None = None,
+        medicalSummary: str | None = None,
+        medicalConditions: str | None = None,
+        prescribedMedications: str | None = None,
+        doctors: str | None = None,
+        associatedStudents: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -239,7 +237,7 @@ class PersonLinks(SentralObject):
 class VenueGroundsLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -250,7 +248,7 @@ class VenueGroundsLinks(SentralObject):
 class ActivityTransportEventLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -261,7 +259,7 @@ class ActivityTransportEventLinks(SentralObject):
 class ActivityTeamLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -272,7 +270,7 @@ class ActivityTeamLinks(SentralObject):
 class ActivityVehicleLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -283,7 +281,7 @@ class ActivityVehicleLinks(SentralObject):
 class StaffQualificationLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -294,7 +292,7 @@ class StaffQualificationLinks(SentralObject):
 class VenueLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -305,7 +303,7 @@ class VenueLinks(SentralObject):
 class ActivityTeamMemberLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -327,16 +325,16 @@ class StudentLinks(SentralObject):
 
     def __init__(
         self,
-        self_: str = None,
-        primaryEnrolment: str = None,
-        person: str = None,
-        activities: str = None,
-        activityLinks: str = None,
-        photo: str = None,
-        documents: str = None,
-        tenants: str = None,
-        flags: str = None,
-        flagLinks: str = None,
+        self_: str | None = None,
+        primaryEnrolment: str | None = None,
+        person: str | None = None,
+        activities: str | None = None,
+        activityLinks: str | None = None,
+        photo: str | None = None,
+        documents: str | None = None,
+        tenants: str | None = None,
+        flags: str | None = None,
+        flagLinks: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -350,7 +348,7 @@ class StudentDocumentLinks(SentralObject):
     self_: str
     file: str
 
-    def __init__(self, self_: str = None, file: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, file: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -361,7 +359,7 @@ class StudentDocumentLinks(SentralObject):
 class CoreStudentLinks(SentralObject):
     self_: str
 
-    def __init__(self, self_: str = None, _data: dict | None = None):
+    def __init__(self, self_: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -377,10 +375,10 @@ class EnrolmentLinks(SentralObject):
 
     def __init__(
         self,
-        self_: str = None,
-        house: str = None,
-        classes: str = None,
-        rollclass: str = None,
+        self_: str | None = None,
+        house: str | None = None,
+        classes: str | None = None,
+        rollclass: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:

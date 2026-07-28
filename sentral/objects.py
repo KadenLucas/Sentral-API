@@ -1,5 +1,3 @@
-# pyright: reportArgumentType=false
-
 import datetime
 from dataclasses import dataclass
 
@@ -26,11 +24,11 @@ class Activity(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityAttributes = None,
-        links: links.ActivityLinks = None,
-        relationships: relationships.ActivityRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityAttributes | None = None,
+        links: links.ActivityLinks | None = None,
+        relationships: relationships.ActivityRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -102,11 +100,11 @@ class AttendeeLink(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.AttendeeLinkAttributes = None,
-        links: links.AttendeeLinkLinks = None,
-        relationships: relationships.AttendeeLinkRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.AttendeeLinkAttributes | None = None,
+        links: links.AttendeeLinkLinks | None = None,
+        relationships: relationships.AttendeeLinkRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -142,11 +140,11 @@ class ActivitySportEvent(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivitySportEventAttributes = None,
-        links: links.ActivitySportEventLinks = None,
-        relationships: relationships.ActivitySportEventRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivitySportEventAttributes | None = None,
+        links: links.ActivitySportEventLinks | None = None,
+        relationships: relationships.ActivitySportEventRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -242,10 +240,10 @@ class ActivityCategory(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityCategoryAttributes = None,
-        links: links.ActivityCategoryLinks = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityCategoryAttributes | None = None,
+        links: links.ActivityCategoryLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -278,11 +276,11 @@ class ActivityGuardianLink(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityGuardianLinkAttributes = None,
-        links: links.ActivityGuardianLinkLinks = None,
-        relationships: relationships.ActivityGuardianLinkRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityGuardianLinkAttributes | None = None,
+        links: links.ActivityGuardianLinkLinks | None = None,
+        relationships: relationships.ActivityGuardianLinkRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -315,11 +313,11 @@ class ActivityResponse(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityResponseAttributes = None,
-        links: links.ActivityResponseLinks = None,
-        relationships: relationships.ActivityResponseRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityResponseAttributes | None = None,
+        links: links.ActivityResponseLinks | None = None,
+        relationships: relationships.ActivityResponseRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -343,15 +341,15 @@ class ActivityRoll(SentralObject):
     id: str
     attributes: attributes.ActivityRollAttributes
     links: links.ActivityRollLinks
-    relationships.ActivityRollRelationships
+    relationships: relationships.ActivityRollRelationships
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityRollAttributes = None,
-        links: links.ActivityRollLinks = None,
-        relationships: relationships.ActivityRollRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityRollAttributes | None = None,
+        links: links.ActivityRollLinks | None = None,
+        relationships: relationships.ActivityRollRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -385,15 +383,15 @@ class ActivityPosition(SentralObject):
     id: str
     attributes: attributes.ActivityPositionAttributes
     links: links.ActivityPositionLinks
-    relationships.ActivityPositionRelationships
+    relationships: relationships.ActivityPositionRelationships
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityPositionAttributes = None,
-        links: links.ActivityPositionLinks = None,
-        relationships: relationships.ActivityPositionRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityPositionAttributes | None = None,
+        links: links.ActivityPositionLinks | None = None,
+        relationships: relationships.ActivityPositionRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -426,11 +424,11 @@ class ActivityPositionGroup(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityPositionGroupAttributes = None,
-        links: links.ActivityPositionGroupLinks = None,
-        relationships: relationships.ActivityPositionGroupRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityPositionGroupAttributes | None = None,
+        links: links.ActivityPositionGroupLinks | None = None,
+        relationships: relationships.ActivityPositionGroupRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -474,11 +472,11 @@ class Person(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.PersonAttributes = None,
-        links: links.PersonLinks = None,
-        relationships: relationships.PersonRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.PersonAttributes | None = None,
+        links: links.PersonLinks | None = None,
+        relationships: relationships.PersonRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -497,17 +495,17 @@ class Staff(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.StaffAttributes = None,
-        links: links.StaffLinks = None,
-        relationships: relationships.StaffRelationships = None,
-        _data: dict | None | None = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.StaffAttributes | None = None,
+        links: links.StaffLinks | None = None,
+        relationships: relationships.StaffRelationships | None = None,
+        _data: dict | None = None,
     ):
         if _data is None:
             _data = locals()
 
-        return super().__init__(_data)
+        super().__init__(_data)
 
     @staticmethod
     def get(engine: Engine, id: int, params: params.StaffParams | None = None):
@@ -602,11 +600,11 @@ class StaffAbsence(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.StaffAbsenceAttributes = None,
-        links: links.StaffAbsenceLinks = None,
-        relationships: relationships.StaffAbsenceRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.StaffAbsenceAttributes | None = None,
+        links: links.StaffAbsenceLinks | None = None,
+        relationships: relationships.StaffAbsenceRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -625,11 +623,11 @@ class VenueGrounds(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.VenueGroundsAttributes = None,
-        links: links.VenueGroundsLinks = None,
-        relationships: relationships.VenueGroundsRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.VenueGroundsAttributes | None = None,
+        links: links.VenueGroundsLinks | None = None,
+        relationships: relationships.VenueGroundsRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -656,11 +654,11 @@ class ActivityTransportEvent(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityTransportEventAttributes = None,
-        links: links.ActivityTransportEventLinks = None,
-        relationships: relationships.ActivityTransportEventRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityTransportEventAttributes | None = None,
+        links: links.ActivityTransportEventLinks | None = None,
+        relationships: relationships.ActivityTransportEventRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -693,11 +691,11 @@ class ActivityTeam(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityTeamAttributes = None,
-        links: links.ActivityTeamLinks = None,
-        relationships: relationships.ActivityTeamRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityTeamAttributes | None = None,
+        links: links.ActivityTeamLinks | None = None,
+        relationships: relationships.ActivityTeamRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -744,11 +742,11 @@ class ActivityVehicle(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityVehicleAttributes = None,
-        links: links.ActivityVehicleLinks = None,
-        relationships: relationships.ActivityVehicleRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityVehicleAttributes | None = None,
+        links: links.ActivityVehicleLinks | None = None,
+        relationships: relationships.ActivityVehicleRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -777,11 +775,11 @@ class StaffQualification(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.StaffQualificationAttributes = None,
-        links: links.StaffQualificationLinks = None,
-        relationships: relationships.StaffQualificationRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.StaffQualificationAttributes | None = None,
+        links: links.StaffQualificationLinks | None = None,
+        relationships: relationships.StaffQualificationRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -799,10 +797,10 @@ class TimetableLesson(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.TimetableLessonAttributes = None,
-        relationships: relationships.TimetableLessonRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.TimetableLessonAttributes | None = None,
+        relationships: relationships.TimetableLessonRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -821,11 +819,11 @@ class Venue(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.VenueAttributes = None,
-        links: links.VenueLinks = None,
-        relationships: relationships.VenueRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.VenueAttributes | None = None,
+        links: links.VenueLinks | None = None,
+        relationships: relationships.VenueRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -861,11 +859,11 @@ class ActivityTeamMember(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.ActivityTeamMemberAttributes = None,
-        links: links.ActivityTeamMemberLinks = None,
-        relationships: relationships.ActivityTeamMemberRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.ActivityTeamMemberAttributes | None = None,
+        links: links.ActivityTeamMemberLinks | None = None,
+        relationships: relationships.ActivityTeamMemberRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -896,11 +894,11 @@ class Student(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.StudentAttributes = None,
-        links: links.StudentLinks = None,
-        relationships: relationships.StudentRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.StudentAttributes | None = None,
+        links: links.StudentLinks | None = None,
+        relationships: relationships.StudentRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -1128,11 +1126,11 @@ class StudentDocument(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.StudentDocumentAttributes = None,
-        links: links.StudentDocumentLinks = None,
-        relationships: relationships.StudentDocumentRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.StudentDocumentAttributes | None = None,
+        links: links.StudentDocumentLinks | None = None,
+        relationships: relationships.StudentDocumentRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -1151,11 +1149,11 @@ class CoreStudent(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.CoreStudentAttributes = None,
-        links: links.CoreStudentLinks = None,
-        relationships: relationships.CoreStudentRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.CoreStudentAttributes | None = None,
+        links: links.CoreStudentLinks | None = None,
+        relationships: relationships.CoreStudentRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -1193,11 +1191,11 @@ class Enrolment(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        id: str = None,
-        attributes: attributes.EnrolmentAttributes = None,
-        links: links.EnrolmentLinks = None,
-        relationships: relationships.EnrolmentRelationships = None,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.EnrolmentAttributes | None = None,
+        links: links.EnrolmentLinks | None = None,
+        relationships: relationships.EnrolmentRelationships | None = None,
         _data: dict | None = None,
     ):
         if _data is None:

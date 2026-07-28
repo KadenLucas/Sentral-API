@@ -3,13 +3,14 @@ from urllib.parse import urlencode
 
 from requests import Response, Session
 
-from .meta import SentralObject  # noqa: F401
+from .meta import SentralObject
 from .params import Params
 from .payloads import Payload
 
+__all__ = ["Engine", "SentralObject"]
 
 class Engine:
-    __slots__ = ["api_url", "api_key", "tenant_key", "session"]
+    __slots__ = ["api_key", "api_url", "session", "tenant_key"]
 
     def __init__(
         self, sentral_rest_url: str, sentral_api_key: str, sentral_tenant_key: str

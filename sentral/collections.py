@@ -1,5 +1,3 @@
-# pyright: reportArgumentType=false
-
 from dataclasses import dataclass
 
 from . import Engine, SentralObject, instances, links, meta, objects, params
@@ -13,9 +11,9 @@ class ActivityCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.Activity] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.Activity] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -40,9 +38,9 @@ class CycleInstanceCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[instances.CycleInstance] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[instances.CycleInstance] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -59,9 +57,9 @@ class AttendeeLinkCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.AttendeeLink] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.AttendeeLink] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -78,9 +76,9 @@ class ActivityInstanceCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[instances.ActivityInstance] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[instances.ActivityInstance] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -107,9 +105,9 @@ class ActivitySportEventCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.ActivitySportEvent] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.ActivitySportEvent] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -136,9 +134,9 @@ class ActivityCategoryCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.ActivityCategory] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.ActivityCategory] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -165,9 +163,9 @@ class ActivityGuardianLinkCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.ActivityGuardianLink] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.ActivityGuardianLink] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -197,9 +195,9 @@ class ActivityResponseCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.ActivityResponse] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.ActivityResponse] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -216,9 +214,9 @@ class ActivityRollCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.ActivityRoll] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.ActivityRoll] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -235,9 +233,9 @@ class ActivityPositionCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.ActivityPosition] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.ActivityPosition] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -264,9 +262,9 @@ class ActivityPositionGroupCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.ActivityPositionGroup] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.ActivityPositionGroup] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -296,9 +294,9 @@ class StaffCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.Staff] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.Staff] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -315,9 +313,9 @@ class VenueGroundsCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.VenueGrounds] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.VenueGrounds] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -334,9 +332,9 @@ class ActivityTeamCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.ActivityTeam] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.ActivityTeam] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -353,9 +351,9 @@ class ActivityTransportEventCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.ActivityTransportEvent] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.ActivityTransportEvent] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -372,9 +370,9 @@ class ActivityVehicleCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.ActivityVehicle] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.ActivityVehicle] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -391,9 +389,9 @@ class VenueCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.Venue] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.Venue] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -410,9 +408,9 @@ class StaffAbsenceCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.StaffAbsence] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.StaffAbsence] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -429,9 +427,9 @@ class StaffQualificationCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.StaffQualification] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.StaffQualification] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -448,9 +446,9 @@ class TimetableLessonCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.TimetableLesson] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.TimetableLesson] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -467,9 +465,9 @@ class ActivityTeamMemberCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.ActivityTeamMember] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.ActivityTeamMember] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -486,9 +484,9 @@ class AbsenceCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.Absence] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.Absence] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -505,9 +503,9 @@ class StudentAcademicReportCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.StudentAcademicReport] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.StudentAcademicReport] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -524,9 +522,9 @@ class StudentAwardLinkCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.StudentAwardLink] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.StudentAwardLink] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -543,9 +541,9 @@ class AwardCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.Award] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.Award] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -562,9 +560,9 @@ class StudentDocumentCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.StudentDocument] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.StudentDocument] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -581,9 +579,9 @@ class StudentAcademicReportEduProCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.StudentAcademicReportEduPro] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.StudentAcademicReportEduPro] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -600,9 +598,9 @@ class EnrolmentCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.Enrolment] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.Enrolment] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -619,9 +617,9 @@ class StudentFlagLinkCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.StudentFlagLink] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.StudentFlagLink] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -638,9 +636,9 @@ class FlagCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.Flag] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.Flag] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -657,9 +655,9 @@ class StudentHouseholdRelationCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.StudentHouseholdRelation] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.StudentHouseholdRelation] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -676,9 +674,9 @@ class SpecialNeedsProgramCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.SpecialNeedsProgram] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.SpecialNeedsProgram] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -695,9 +693,9 @@ class TenantCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.Tenant] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.Tenant] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -714,9 +712,9 @@ class CoreClassCollection(SentralObject):
 
     def __init__(
         self,
-        data: list[objects.CoreClass] = None,
-        meta: meta.CollectionMeta = None,
-        links: links.CollectionLinks = None,
+        data: list[objects.CoreClass] | None = None,
+        meta: meta.CollectionMeta | None = None,
+        links: links.CollectionLinks | None = None,
         _data: dict | None = None,
     ):
         if _data is None:

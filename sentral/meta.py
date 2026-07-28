@@ -45,7 +45,7 @@ class SentralObject:
 
     @property
     def __dict__(self):  # pyright: ignore[reportIncompatibleVariableOverride]
-        output = dict()
+        output = {}
 
         for slot in self.__slots__:
             value = getattr(self, slot)

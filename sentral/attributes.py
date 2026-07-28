@@ -1,5 +1,3 @@
-# pyright: reportArgumentType=false
-
 import datetime
 from dataclasses import dataclass
 
@@ -35,30 +33,30 @@ class ActivityAttributes(SentralObject):
 
     def __init__(
         self,
-        name: str = None,
-        reportName: str = None,
-        description: str = None,
-        startDate: datetime.date = None,
-        endDate: datetime.date = None,
-        startTime: datetime.time = None,
-        endTime: datetime.time = None,
-        permissionFormDueDate: datetime.date = None,
-        isRestrictedByTerm: bool = None,
-        isRestrictedByYear: bool = None,
-        showReports: bool = None,
-        showAttendance: bool = None,
-        showPortal: bool = None,
-        selfRegistration: bool = None,
-        approvalRequired: bool = None,
-        maximumPlaces: int = None,
-        waitingListPlaces: int = None,
-        archived: datetime.date = None,
-        riskAssessment: bool = None,
-        registrationType: str = None,
-        portalDescription: str = None,
-        availableTerms: list[int] = None,
-        availableYears: list[str] = None,
-        isActive: bool = None,
+        name: str | None = None,
+        reportName: str | None = None,
+        description: str | None = None,
+        startDate: datetime.date | None = None,
+        endDate: datetime.date | None = None,
+        startTime: datetime.time | None = None,
+        endTime: datetime.time | None = None,
+        permissionFormDueDate: datetime.date | None = None,
+        isRestrictedByTerm: bool | None = None,
+        isRestrictedByYear: bool | None = None,
+        showReports: bool | None = None,
+        showAttendance: bool | None = None,
+        showPortal: bool | None = None,
+        selfRegistration: bool | None = None,
+        approvalRequired: bool | None = None,
+        maximumPlaces: int | None = None,
+        waitingListPlaces: int | None = None,
+        archived: datetime.date | None = None,
+        riskAssessment: bool | None = None,
+        registrationType: str | None = None,
+        portalDescription: str | None = None,
+        availableTerms: list[int] | None = None,
+        availableYears: list[str] | None = None,
+        isActive: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -76,10 +74,10 @@ class CycleInstanceAttributes(SentralObject):
 
     def __init__(
         self,
-        name: str = None,
-        year: int = None,
-        cycle: str = None,
-        period: str = None,
+        name: str | None = None,
+        year: int | None = None,
+        cycle: str | None = None,
+        period: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -99,12 +97,12 @@ class AttendeeLinkAttributes(SentralObject):
 
     def __init__(
         self,
-        attendeeType: str = None,
-        showInReports: bool = None,
-        points: int = None,
-        permissionGiven: bool = None,
-        paid: bool = None,
-        paidAmount: str = None,
+        attendeeType: str | None = None,
+        showInReports: bool | None = None,
+        points: int | None = None,
+        permissionGiven: bool | None = None,
+        paid: bool | None = None,
+        paidAmount: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -129,17 +127,17 @@ class ActivityInstanceAttributes(SentralObject):
 
     def __init__(
         self,
-        status: str = None,
-        year: int = None,
-        name: str = None,
-        startDate: datetime.date = None,
-        endDate: datetime.date = None,
-        startTime: datetime.time = None,
-        endTime: datetime.time = None,
-        isPublishedToPortal: bool = None,
-        isPaymentRequired: bool = None,
-        isPermissionRequired: bool = None,
-        isActive: bool = None,
+        status: str | None = None,
+        year: int | None = None,
+        name: str | None = None,
+        startDate: datetime.date | None = None,
+        endDate: datetime.date | None = None,
+        startTime: datetime.time | None = None,
+        endTime: datetime.time | None = None,
+        isPublishedToPortal: bool | None = None,
+        isPaymentRequired: bool | None = None,
+        isPermissionRequired: bool | None = None,
+        isActive: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -162,15 +160,15 @@ class ActivitySportEventAttributes(SentralObject):
 
     def __init__(
         self,
-        name: str = None,
-        description: str = None,
-        startDateTime: datetime.datetime = None,
-        endDateTime: datetime.datetime = None,
-        placeType: str = None,
-        opposition: str = None,
-        playersType: str = None,
-        type: str = None,
-        isActive: bool = None,
+        name: str | None = None,
+        description: str | None = None,
+        startDateTime: datetime.datetime | None = None,
+        endDateTime: datetime.datetime | None = None,
+        placeType: str | None = None,
+        opposition: str | None = None,
+        playersType: str | None = None,
+        type: str | None = None,
+        isActive: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -184,7 +182,7 @@ class ActivityCategoryAttributes(SentralObject):
     name: str
     type: str
 
-    def __init__(self, name: str = None, type: str = None, _data: dict | None = None):
+    def __init__(self, name: str | None = None, type: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -198,8 +196,8 @@ class ActivityGuardianLinkAttributes(SentralObject):
 
     def __init__(
         self,
-        startTime: datetime.time = None,
-        endTime: datetime.time = None,
+        startTime: datetime.time | None = None,
+        endTime: datetime.time | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -220,13 +218,13 @@ class ActivityResponseAttributes(SentralObject):
 
     def __init__(
         self,
-        additionalNotes: str = None,
-        medicalDetails: str = None,
-        emergencyContactDetails: str = None,
-        consentedAt: objects.CompositeTime = None,
-        consentedBy: str = None,
-        permissionGiven: str = None,
-        isPaid: bool = None,
+        additionalNotes: str | None = None,
+        medicalDetails: str | None = None,
+        emergencyContactDetails: str | None = None,
+        consentedAt: objects.CompositeTime | None = None,
+        consentedBy: str | None = None,
+        permissionGiven: str | None = None,
+        isPaid: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -243,9 +241,9 @@ class ActivityRollAttributes(SentralObject):
 
     def __init__(
         self,
-        name: str = None,
-        rollDate: str = None,
-        isSubmitted: bool = None,
+        name: str | None = None,
+        rollDate: str | None = None,
+        isSubmitted: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -258,7 +256,7 @@ class ActivityRollAttributes(SentralObject):
 class ActivityPositionAttributes(SentralObject):
     name: str
 
-    def __init__(self, name: str = None, _data: dict | None = None):
+    def __init__(self, name: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -269,7 +267,7 @@ class ActivityPositionAttributes(SentralObject):
 class ActivityPositionGroupAttributes(SentralObject):
     name: str
 
-    def __init__(self, name: str = None, _data: dict | None = None):
+    def __init__(self, name: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -287,12 +285,12 @@ class StaffAttributes(SentralObject):
 
     def __init__(
         self,
-        staffCode: str = None,
-        timetableCode: str = None,
-        barcode: str = None,
-        createdAt: objects.CompositeTime = None,
-        updatedAt: objects.CompositeTime = None,
-        isActive: bool = None,
+        staffCode: str | None = None,
+        timetableCode: str | None = None,
+        barcode: str | None = None,
+        createdAt: objects.CompositeTime | None = None,
+        updatedAt: objects.CompositeTime | None = None,
+        isActive: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -317,17 +315,17 @@ class StaffAbsenceAttributes(SentralObject):
 
     def __init__(
         self,
-        type: str = None,
-        startDate: datetime.date = None,
-        endDate: datetime.date = None,
-        startTime: datetime.time = None,
-        endTime: datetime.time = None,
-        reason: str = None,
-        notes: str = None,
-        hasReceivedMedicalCertificate: bool = None,
-        externalSource: str = None,
-        externalId: str = None,
-        isApproved: bool = None,
+        type: str | None = None,
+        startDate: datetime.date | None = None,
+        endDate: datetime.date | None = None,
+        startTime: datetime.time | None = None,
+        endTime: datetime.time | None = None,
+        reason: str | None = None,
+        notes: str | None = None,
+        hasReceivedMedicalCertificate: bool | None = None,
+        externalSource: str | None = None,
+        externalId: str | None = None,
+        isApproved: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -379,44 +377,44 @@ class PersonAttributes(SentralObject):
 
     def __init__(
         self,
-        externalId: str = None,
-        refId: str = None,
-        contactCode: str = None,
-        firstName: str = None,
-        middleNames: str = None,
-        lastName: str = None,
-        legalLastName: str = None,
-        title: str = None,
-        preferredName: str = None,
-        gender: str = None,
-        genderDescription: str = None,
-        genderCode: str = None,
-        dateOfBirth: datetime.date = None,
-        dateOfDeath: datetime.date = None,
-        crn: str = None,
-        otherLanguage: str = None,
-        otherLanguageCode: str = None,
-        languageSpokenAtHome: str = None,
-        languageSpokenAtHomeCode: str = None,
-        indigenousStatus: str = None,
-        indigenousStatusCode: str = None,
-        nationality: str = None,
-        nationalityCode: str = None,
-        countryOfCitizenship: str = None,
-        countryOfCitizenshipCode: str = None,
-        religion: str = None,
-        religionCode: str = None,
-        countryOfBirth: str = None,
-        countryOfBirthCode: str = None,
-        ethnicGroup: str = None,
-        ethnicGroupCode: str = None,
-        placeOfBirth: str = None,
-        residentialStatus: str = None,
-        residentialStatusCode: str = None,
-        isDeceased: bool = None,
-        createdAt: objects.CompositeTime = None,
-        updatedAt: objects.CompositeTime = None,
-        isActive: bool = None,
+        externalId: str | None = None,
+        refId: str | None = None,
+        contactCode: str | None = None,
+        firstName: str | None = None,
+        middleNames: str | None = None,
+        lastName: str | None = None,
+        legalLastName: str | None = None,
+        title: str | None = None,
+        preferredName: str | None = None,
+        gender: str | None = None,
+        genderDescription: str | None = None,
+        genderCode: str | None = None,
+        dateOfBirth: datetime.date | None = None,
+        dateOfDeath: datetime.date | None = None,
+        crn: str | None = None,
+        otherLanguage: str | None = None,
+        otherLanguageCode: str | None = None,
+        languageSpokenAtHome: str | None = None,
+        languageSpokenAtHomeCode: str | None = None,
+        indigenousStatus: str | None = None,
+        indigenousStatusCode: str | None = None,
+        nationality: str | None = None,
+        nationalityCode: str | None = None,
+        countryOfCitizenship: str | None = None,
+        countryOfCitizenshipCode: str | None = None,
+        religion: str | None = None,
+        religionCode: str | None = None,
+        countryOfBirth: str | None = None,
+        countryOfBirthCode: str | None = None,
+        ethnicGroup: str | None = None,
+        ethnicGroupCode: str | None = None,
+        placeOfBirth: str | None = None,
+        residentialStatus: str | None = None,
+        residentialStatusCode: str | None = None,
+        isDeceased: bool | None = None,
+        createdAt: objects.CompositeTime | None = None,
+        updatedAt: objects.CompositeTime | None = None,
+        isActive: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -429,7 +427,7 @@ class PersonAttributes(SentralObject):
 class VenueGroundsAttributes(SentralObject):
     name: str
 
-    def __init__(self, name: str = None, _data: dict | None = None):
+    def __init__(self, name: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -444,9 +442,9 @@ class ActivityTransportEventAttributes(SentralObject):
 
     def __init__(
         self,
-        date: datetime.date = None,
-        time: datetime.time = None,
-        type: str = None,
+        date: datetime.date | None = None,
+        time: datetime.time | None = None,
+        type: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -459,7 +457,7 @@ class ActivityTransportEventAttributes(SentralObject):
 class ActivityTeamAttributes(SentralObject):
     name: str
 
-    def __init__(self, name: str = None, _data: dict | None = None):
+    def __init__(self, name: str | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -477,12 +475,12 @@ class ActivityVehicleAttributes(SentralObject):
 
     def __init__(
         self,
-        name: str = None,
-        description: str = None,
-        useDate: datetime.date = None,
-        vehicleIdentifier: str = None,
-        capacity: int = None,
-        type: str = None,
+        name: str | None = None,
+        description: str | None = None,
+        useDate: datetime.date | None = None,
+        vehicleIdentifier: str | None = None,
+        capacity: int | None = None,
+        type: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -503,13 +501,13 @@ class StaffQualificationAttributes(SentralObject):
 
     def __init__(
         self,
-        qualification: str = None,
-        type: str = None,
-        from_: str = None,
-        aitsTeacherAccreditationLevel: str = None,
-        nextAitsTeacherAccreditationLevel: str = None,
-        dateAchieved: datetime.date = None,
-        isActive: bool = None,
+        qualification: str | None = None,
+        type: str | None = None,
+        from_: str | None = None,
+        aitsTeacherAccreditationLevel: str | None = None,
+        nextAitsTeacherAccreditationLevel: str | None = None,
+        dateAchieved: datetime.date | None = None,
+        isActive: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -538,21 +536,21 @@ class TimetableLessonAttributes(SentralObject):
 
     def __init__(
         self,
-        className: str = None,
-        subject: str = None,
-        roomName: str = None,
-        teacherName: str = None,
-        teacherIds: list[int] = None,
-        date: datetime.date = None,
-        dayName: str = None,
-        dayOrder: str = None,
-        periodName: str = None,
-        periodOrder: int = None,
-        startTime: datetime.time = None,
-        endTime: datetime.time = None,
-        colour: str = None,
-        classType: str = None,
-        rollMarkingUrl: str = None,
+        className: str | None = None,
+        subject: str | None = None,
+        roomName: str | None = None,
+        teacherName: str | None = None,
+        teacherIds: list[int] | None = None,
+        date: datetime.date | None = None,
+        dayName: str | None = None,
+        dayOrder: str | None = None,
+        periodName: str | None = None,
+        periodOrder: int | None = None,
+        startTime: datetime.time | None = None,
+        endTime: datetime.time | None = None,
+        colour: str | None = None,
+        classType: str | None = None,
+        rollMarkingUrl: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -569,9 +567,9 @@ class VenueAttributes(SentralObject):
 
     def __init__(
         self,
-        name: str = None,
-        address: str = None,
-        mapUrl: str = None,
+        name: str | None = None,
+        address: str | None = None,
+        mapUrl: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -584,7 +582,7 @@ class VenueAttributes(SentralObject):
 class ActivityTeamMemberAttributes(SentralObject):
     is_active: bool
 
-    def __init__(self, is_active: bool = None, _data: dict | None = None):
+    def __init__(self, is_active: bool | None = None, _data: dict | None = None):
         if _data is None:
             _data = locals()
 
@@ -623,33 +621,33 @@ class StudentAttributes(SentralObject):
 
     def __init__(
         self,
-        studentCode: str = None,
-        barcode: str = None,
-        isEligibleForDiscount: bool = None,
-        permissionToPhotograph: bool = None,
-        examNumber: str = None,
-        usiId: str = None,
-        acaraId: str = None,
-        systemStudentId: str = None,
-        username: str = None,
-        ealStage: str = None,
-        ealIsReceivingSupport: bool = None,
-        ealLastAssessmentAt: str = None,
-        isSubjectToCourtOrders: bool = None,
-        courtOrderInformation: str = None,
-        studentFirstLanguage: str = None,
-        studentFirstLanguageDesc: str = None,
-        languageOtherThanEnglishSpokenAtHome: bool = None,
-        studentMainlySpeaksEnglishAtHome: bool = None,
-        loteBackground: str = None,
-        isPayingInternationalFee: bool = None,
-        cpsfIsInCare: bool = None,
-        cpsfCaseManager: str = None,
-        cpsfDistrict: str = None,
-        cpsfContactNumber: str = None,
-        createdAt: objects.CompositeTime = None,
-        updatedAt: objects.CompositeTime = None,
-        isActive: bool = None,
+        studentCode: str | None = None,
+        barcode: str | None = None,
+        isEligibleForDiscount: bool | None = None,
+        permissionToPhotograph: bool | None = None,
+        examNumber: str | None = None,
+        usiId: str | None = None,
+        acaraId: str | None = None,
+        systemStudentId: str | None = None,
+        username: str | None = None,
+        ealStage: str | None = None,
+        ealIsReceivingSupport: bool | None = None,
+        ealLastAssessmentAt: str | None = None,
+        isSubjectToCourtOrders: bool | None = None,
+        courtOrderInformation: str | None = None,
+        studentFirstLanguage: str | None = None,
+        studentFirstLanguageDesc: str | None = None,
+        languageOtherThanEnglishSpokenAtHome: bool | None = None,
+        studentMainlySpeaksEnglishAtHome: bool | None = None,
+        loteBackground: str | None = None,
+        isPayingInternationalFee: bool | None = None,
+        cpsfIsInCare: bool | None = None,
+        cpsfCaseManager: str | None = None,
+        cpsfDistrict: str | None = None,
+        cpsfContactNumber: str | None = None,
+        createdAt: objects.CompositeTime | None = None,
+        updatedAt: objects.CompositeTime | None = None,
+        isActive: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -665,8 +663,8 @@ class StudentDocumentAttributes(SentralObject):
 
     def __init__(
         self,
-        fileName: str = None,
-        isConfidential: bool = None,
+        fileName: str | None = None,
+        isConfidential: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -704,30 +702,30 @@ class CoreStudentAttributes(SentralObject):
 
     def __init__(
         self,
-        firstName: str = None,
-        lastName: str = None,
-        preferredName: str = None,
-        gender: str = None,
-        barcode: str = None,
-        examId: str = None,
-        schoolYear: str = None,
-        dateOfBirth: datetime.date = None,
-        allergies: list[str] = None,
-        medicalConditions: list[str] = None,
-        externalId: str = None,
-        externalSource: str = None,
-        username: str = None,
-        email: str = None,
-        mobile: str = None,
-        refId: str = None,
-        eslSupportNeeded: bool = None,
-        eslDateAssessed: datetime.date = None,
-        isEslSupportReceived: bool = None,
-        enrolDate: datetime.date = None,
-        createdAt: objects.CompositeTime = None,
-        updatedAt: objects.CompositeTime = None,
-        isActive: bool = None,
-        indigenousStatus: str = None,
+        firstName: str | None = None,
+        lastName: str | None = None,
+        preferredName: str | None = None,
+        gender: str | None = None,
+        barcode: str | None = None,
+        examId: str | None = None,
+        schoolYear: str | None = None,
+        dateOfBirth: datetime.date | None = None,
+        allergies: list[str] | None = None,
+        medicalConditions: list[str] | None = None,
+        externalId: str | None = None,
+        externalSource: str | None = None,
+        username: str | None = None,
+        email: str | None = None,
+        mobile: str | None = None,
+        refId: str | None = None,
+        eslSupportNeeded: bool | None = None,
+        eslDateAssessed: datetime.date | None = None,
+        isEslSupportReceived: bool | None = None,
+        enrolDate: datetime.date | None = None,
+        createdAt: objects.CompositeTime | None = None,
+        updatedAt: objects.CompositeTime | None = None,
+        isActive: bool | None = None,
+        indigenousStatus: str | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
@@ -754,19 +752,19 @@ class EnrolmentAttributes(SentralObject):
 
     def __init__(
         self,
-        startDate: datetime.date = None,
-        endDate: datetime.date = None,
-        status: str = None,
-        school: str = None,
-        schoolYear: str = None,
-        rollClass: str = None,
-        isBoarding: bool = None,
-        boardingHouse: str = None,
-        tutorGroup: str = None,
-        fteAmount: float = None,
-        createdAt: objects.CompositeTime = None,
-        updatedAt: objects.CompositeTime = None,
-        isActive: bool = None,
+        startDate: datetime.date | None = None,
+        endDate: datetime.date | None = None,
+        status: str | None = None,
+        school: str | None = None,
+        schoolYear: str | None = None,
+        rollClass: str | None = None,
+        isBoarding: bool | None = None,
+        boardingHouse: str | None = None,
+        tutorGroup: str | None = None,
+        fteAmount: float | None = None,
+        createdAt: objects.CompositeTime | None = None,
+        updatedAt: objects.CompositeTime | None = None,
+        isActive: bool | None = None,
         _data: dict | None = None,
     ):
         if _data is None:
