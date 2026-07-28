@@ -524,11 +524,7 @@ class Staff(SentralObject):
         return Staff(_data=res)
 
     def delete(self, engine: Engine):
-        res = engine.query_raw(
-            endpoint=self.links.self_,
-            method="DELETE",
-            payload=payloads.StaffPayload(self),
-        )
+        res = engine.query_raw(endpoint=self.links.self_, method="DELETE")
 
         return res.ok
 
@@ -1220,10 +1216,90 @@ class Enrolment(SentralObject):
 
         return Enrolment(_data=res)
 
+    def delete(self, engine: Engine):
+        res = engine.query_raw(endpoint=self.links.self_, method="DELETE")
+
+        return res.ok
+
+    def patch(self, engine: Engine):
+        res = engine.query_json(
+            endpoint=self.links.self_,
+            method="PATCH",
+            payload=payloads.EnrolmentPayload(self),
+        )
+
+        return Enrolment(_data=res)
+
+    def get_classes(
+        self, engine: Engine, params: params.EnrolmentClassesParams | None = None
+    ):
+        res = engine.query_json(
+            endpoint=self.links.classes, method="GET", params=params
+        )
+
+        return collections.ClassCollection(_data=res)
+
+    def get_house(
+        self, engine: Engine, params: params.EnrolmentHouseParams | None = None
+    ):
+        res = engine.query_json(endpoint=self.links.house, method="GET", params=params)
+
+        return House(_data=res)
+
+    def get_rollclass(
+        self, engine: Engine, params: params.EnrolmentRollclassParams | None = None
+    ):
+        res = engine.query_json(
+            endpoint=self.links.rollclass, method="GET", params=params
+        )
+
+        return Rollclass(_data=res)
+
+
+@dataclass(init=False, slots=True)
+class House(SentralObject):
+    type: str
+    id: str
+    attributes: attributes.HouseAttributes
+    links: links.HouseLinks
+    relationships: relationships.HouseRelationships
+
+    def __init__(
+        self,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.HouseAttributes | None = None,
+        links: links.HouseLinks | None = None,
+        relationships: relationships.HouseRelationships | None = None,
+        _data: dict | None = None,
+    ):
+        if _data is None:
+            _data = locals()
+
+        super().__init__(_data)
+
 
 @dataclass(init=False, slots=True)
 class Absence(SentralObject):
-    pass
+    type: str
+    id: str
+    attributes: attributes.AbsenceAttributes
+    links: links.AbsenceLinks
+    relationships: relationships.AbsenceRelationships
+
+    def __init__(
+        self,
+        type: str | None = None,
+        id: str | None = None,
+        attributes: attributes.AbsenceAttributes | None = None,
+        links: links.AbsenceLinks | None = None,
+        relationships: relationships.AbsenceRelationships | None = None,
+        _data: dict | None = None,
+    ):
+        if _data is None:
+            _data = locals()
+
+        super().__init__(_data)
 
 
 @dataclass(init=False, slots=True)
@@ -1273,4 +1349,14 @@ class Tenant(SentralObject):
 
 @dataclass(init=False, slots=True)
 class CoreClass(SentralObject):
+    pass
+
+
+@dataclass(init=False, slots=True)
+class Rollclass(SentralObject):
+    pass
+
+
+@dataclass(init=False, slots=True)
+class Class(SentralObject):
     pass

@@ -587,3 +587,63 @@ class EnrolmentParams(Params):
     endDateFrom: datetime.date | None = None
     endDateTo: datetime.date | None = None
     includeInactive: bool | None = None
+
+
+@dataclass(slots=True)
+class EnrolmentCollectionParams(Params):
+    include: ParamList[
+        Literal["student", "house", "rollclass", "classes", "campus"]
+    ] | None = None
+    limit: int | None = None
+    offset: int | None = None
+    ids: ParamList | None = None
+    academicPeriodIds: ParamList | None = None
+    studentIds: ParamList | None = None
+    rollclassIds: ParamList | None = None
+    yearLevelIds: ParamList | None = None
+    houseIds: ParamList | None = None
+    statuses: ParamList | None = None
+    startDateFrom: datetime.date | None = None
+    startDateTo: datetime.date | None = None
+    endDateFrom: datetime.date | None = None
+    endDateTo: datetime.date | None = None
+    includeInactive: bool | None = None
+
+
+@dataclass(slots=True)
+class EnrolmentClassesParams(Params):
+    include: None = None
+    limit: int | None = None
+    offset: int | None = None
+
+
+@dataclass(slots=True)
+class EnrolmentHouseParams(Params):
+    include: None = None
+
+
+@dataclass(slots=True)
+class EnrolmentRollclassParams(Params):
+    include: None = None
+
+
+@dataclass(slots=True)
+class HouseCollectionParams(Params):
+    include: None = None
+    limit: int | None = None
+    offset: int | None = None
+    ids: ParamList | None = None
+    schoolIds: ParamList | None = None
+
+
+@dataclass(slots=True)
+class AbsenceCollectionParams(Params):
+    include: None = None
+    limit: int | None = None
+    offset: int | None = None
+    studentId: ParamList | None = (
+        None  # Check for potential error - should presumably be "studentIds"
+    )
+    year: ParamList | None = None  # Check for potential error - should presumably be "years"
+    coreStudentIds: ParamList | None = None
+    dates: ParamList | None = None

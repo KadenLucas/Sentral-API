@@ -544,3 +544,41 @@ class EnrolmentRelationships(SentralObject):
             _data = locals()
 
         super().__init__(_data)
+
+
+@dataclass(init=False, slots=True)
+class HouseRelationships(SentralObject):
+    students: CollectionRelationship
+    school: SingleRelationship
+
+    def __init__(
+        self,
+        students: CollectionRelationship,
+        school: SingleRelationship,
+        _data: dict | None = None,
+    ):
+        if _data is None:
+            _data = locals()
+
+        super().__init__(_data)
+
+
+@dataclass(init=False, slots=True)
+class AbsenceRelationships(SentralObject):
+    reaseon: SingleRelationship
+    enrolmentStudent: SingleRelationship
+    coreStudent: SingleRelationship
+    matchingFutureAbsence: SingleRelationship
+
+    def __init__(
+        self,
+        reaseon: SingleRelationship | None = None,
+        enrolmentStudent: SingleRelationship | None = None,
+        coreStudent: SingleRelationship | None = None,
+        matchingFutureAbsence: SingleRelationship | None = None,
+        _data: dict | None = None,
+    ):
+        if _data is None:
+            _data = locals()
+
+        super().__init__(_data)

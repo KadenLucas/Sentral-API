@@ -771,3 +771,52 @@ class EnrolmentAttributes(SentralObject):
             _data = locals()
 
         super().__init__(_data)
+
+
+@dataclass(init=False, slots=True)
+class HouseAttributes(SentralObject):
+    name: str
+    sequence: int
+
+    def __init__(
+        self, name: str | None = None, sequence: int | None = None, _data: dict | None = None
+    ):
+        if _data is None:
+            _data = locals()
+
+        super().__init__(_data)
+
+
+@dataclass(init=False, slots=True)
+class AbsenceAttributes(SentralObject):
+    type: str
+    date: str
+    start: str
+    end: str
+    comment: str
+    explainer: str
+    explainerSource: str
+    letterSent: bool
+    bulkAbsenceId: bool  # Should be a string?
+    submitted: bool
+    externalSource: str
+
+    def __init__(
+        self,
+        type: str | None = None,
+        date: str | None = None,
+        start: str | None = None,
+        end: str | None = None,
+        comment: str | None = None,
+        explainer: str | None = None,
+        explainerSource: str | None = None,
+        letterSent: bool | None = None,
+        bulkAbsenceId: bool | None = None,
+        submitted: bool | None = None,
+        externalSource: str | None = None,
+        _data: dict | None = None,
+    ):
+        if _data is None:
+            _data = locals()
+
+        super().__init__(_data)
